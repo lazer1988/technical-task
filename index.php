@@ -1,76 +1,44 @@
 <?php
 
-class Animal
-{
-    public $name;
+require_once './vendor/autoload.php';
 
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
+use Zoo\Zoo;
+use Zoo\Animal\Bird\Crow;
+use Zoo\Animal\Bird\Sparrow;
+use Zoo\Animal\Dog\Boxer;
+use Zoo\Animal\Dog\Bulldog;
+use Zoo\Animal\Fish\Crucian;
+use Zoo\Animal\Fish\Pike;
+use Zoo\Animal\Monkey\Chimpanzee;
+use Zoo\Animal\Monkey\Gorilla;
+use Zoo\Stuff\Manager;
+use Zoo\Stuff\Cleaner;
 
-    public function walk()
-    {
-        if($this->name == 'dog' || $this->name == 'cat' || $this->name == 'rat')
-            echo $this->name . ' walking';
-    }
+// add animals to zoo
+$animals = new Zoo();
+$animals
+    ->addUnit(new Crow())
+    ->addUnit(new Sparrow())
+    ->addUnit(new Boxer())
+    ->addUnit(new Bulldog())
+    ->addUnit(new Crucian())
+    ->addUnit(new Pike())
+    ->addUnit(new Chimpanzee())
+    ->addUnit(new Gorilla())
+;
 
-    public function meow()
-    {
-        echo $this->name . ' meow';
-    }
+// add stuff to zoo
+$stuff = new Zoo();
+$stuff
+    ->addUnit(new Manager())
+    ->addUnit(new Cleaner())
+;
 
-    public function run()
-    {
-        echo $this->name . ' run';
-    }
+// create zoo
+$zoo = new Zoo();
+$zoo
+    ->addUnit($stuff)
+    ->addUnit($animals)
+;
 
-    public function wuf()
-    {
-        echo $this->name . ' wuf';
-    }
-
-    public function byte($object)
-    {
-        echo $this->name . ' has bitten' . $object;
-    }
-
-    public function fly()
-    {
-        echo $this->name . ' fly';
-    }
-
-    public function pi()
-    {
-        echo $this->name . ' pi';
-    }
-}
-
-$animals = [
-    new Animal('cat'), new Animal('dog'), new Animal('sparrow'), new Animal('rat')
-];
-
-foreach($animals as $animal) {
-    switch($animal->name)
-    {
-        case 'cat':
-            $animal->walk();
-            $animal->meow();
-            break;
-        case 'dog':
-            $animal->walk();
-            $animal->run();
-            $animal->wuf();
-            $animal->byte('man');
-            break;
-        case 'sparrow':
-            $animal->walk();
-            $animal->tweet();
-            $animal->fly();
-            break;
-        case 'rat':
-            $animal->pi();
-            break;
-    }
-    $animal->eat('food');
-}
+$zoo->behavior();

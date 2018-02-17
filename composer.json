@@ -1,0 +1,14 @@
+{
+    "name": "lazer1988/amadeus-test",
+    "autoload": {
+        "psr-4": {
+          "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}

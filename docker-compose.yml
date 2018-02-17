@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    zoo:
+        container_name: zoo
+        build: ./docker/php
+        volumes:
+            - ./:/var/www/zoo
+        working_dir: /var/www/zoo
+        expose:
+            - "9000"
+        tty: true
