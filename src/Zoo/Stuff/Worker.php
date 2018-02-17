@@ -12,17 +12,10 @@ class Worker extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function behavior()
     {
-        return 'Worker';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function comeToWork()
-    {
-        echo $this->name().' came to work'.PHP_EOL;
+        $this->comeToWork();
+        $this->feed();
     }
 
     /**
@@ -36,9 +29,16 @@ class Worker extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    protected function name(): string
     {
-        $this->comeToWork();
-        $this->feed();
+        return 'Worker';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function comeToWork()
+    {
+        echo $this->name().' came to work'.PHP_EOL;
     }
 }

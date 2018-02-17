@@ -12,17 +12,10 @@ class Manager extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function behavior()
     {
-        return 'Manager';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function comeToWork()
-    {
-        echo $this->name().' stuck on traffic jet and late'.PHP_EOL;
+        $this->comeToWork();
+        $this->order();
     }
 
     /**
@@ -36,9 +29,16 @@ class Manager extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    protected function name(): string
     {
-        $this->comeToWork();
-        $this->order();
+        return 'Manager';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function comeToWork()
+    {
+        echo $this->name().' stuck on traffic jet and late'.PHP_EOL;
     }
 }

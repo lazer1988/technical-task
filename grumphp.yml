@@ -9,3 +9,5 @@ parameters:
                 - 'print_r('
                 - 'die('
                 - 'exit('
+        phpcs:
+            standard: 'vendor/m6web/symfony2-coding-standard/Symfony2'
