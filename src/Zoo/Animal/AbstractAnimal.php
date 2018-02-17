@@ -5,18 +5,18 @@ namespace Zoo\Animal;
 use Zoo\UnitInterface;
 
 /**
- * Class Animal
+ * Class AbstractAnimal
  *
  * @package Zoo\Animal
  */
 abstract class AbstractAnimal implements UnitInterface
 {
     /**
-     * Animal name
+     * Name of animal
      *
      * @return string
      */
-    abstract public function name(): string;
+    abstract protected function name(): string;
 
     /**
      * Animal eat

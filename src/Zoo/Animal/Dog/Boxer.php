@@ -12,7 +12,7 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Boxer';
     }
@@ -28,7 +28,7 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function walk()
+    protected function walk()
     {
         echo $this->name().' is walking with master'.PHP_EOL;
     }
@@ -36,7 +36,7 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function run()
+    protected function run()
     {
         echo $this->name().' is running'.PHP_EOL;
     }
@@ -44,7 +44,7 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function wuf()
+    protected function wuf()
     {
         echo $this->name().' is barking'.PHP_EOL;
     }

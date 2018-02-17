@@ -12,7 +12,7 @@ class Gorilla extends AbstractMonkey
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Gorilla';
     }
@@ -28,7 +28,7 @@ class Gorilla extends AbstractMonkey
     /**
      * {@inheritdoc}
      */
-    public function jump()
+    protected function jump()
     {
         echo $this->name().' is jumping'.PHP_EOL;
     }

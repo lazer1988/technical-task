@@ -1,0 +1,11 @@
+parameters:
+    tasks:
+        securitychecker:
+            format: simple
+        git_conflict: ~
+        git_blacklist:
+            keywords:
+                - 'var_dump('
+                - 'print_r('
+                - 'die('
+                - 'exit('

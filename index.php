@@ -12,6 +12,7 @@ use Zoo\Animal\Fish\Pike;
 use Zoo\Animal\Monkey\Chimpanzee;
 use Zoo\Animal\Monkey\Gorilla;
 use Zoo\Stuff\Manager;
+use Zoo\Stuff\Worker;
 use Zoo\Stuff\Cleaner;
 
 // add animals to zoo
@@ -31,6 +32,7 @@ $animals
 $stuff = new Zoo();
 $stuff
     ->addUnit(new Manager())
+    ->addUnit(new Worker())
     ->addUnit(new Cleaner())
 ;
 

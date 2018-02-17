@@ -14,7 +14,7 @@ abstract class AbstractBird extends AbstractAnimal
     /**
      * Bird fly
      */
-    abstract public function fly();
+    abstract protected function fly();
 
     /**
      * {@inheritdoc}

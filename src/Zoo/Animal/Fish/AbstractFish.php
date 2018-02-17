@@ -14,7 +14,7 @@ abstract class AbstractFish extends AbstractAnimal
     /**
      * Fish swim
      */
-    abstract public function swim();
+    abstract protected function swim();
 
     /**
      * {@inheritdoc}

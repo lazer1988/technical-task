@@ -3,18 +3,18 @@
 namespace Zoo\Stuff;
 
 /**
- * Class Manager
+ * Class Worker
  *
  * @package Zoo\Stuff
  */
-class Manager extends AbstractStuff
+class Worker extends AbstractStuff
 {
     /**
      * {@inheritdoc}
      */
     protected function name(): string
     {
-        return 'Manager';
+        return 'Worker';
     }
 
     /**
@@ -22,15 +22,15 @@ class Manager extends AbstractStuff
      */
     protected function comeToWork()
     {
-        echo $this->name().' stuck on traffic jet and late'.PHP_EOL;
+        echo $this->name().' came to work'.PHP_EOL;
     }
 
     /**
-     * Give orders for stuff
+     * Worked feed animals
      */
-    public function order()
+    public function feed()
     {
-        echo $this->name().' give orders for stuff'.PHP_EOL;
+        echo $this->name().' feed animals'.PHP_EOL;
     }
 
     /**
@@ -39,6 +39,6 @@ class Manager extends AbstractStuff
     public function behavior()
     {
         $this->comeToWork();
-        $this->order();
+        $this->feed();
     }
 }

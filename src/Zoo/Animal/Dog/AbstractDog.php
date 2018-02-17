@@ -14,22 +14,22 @@ abstract class AbstractDog extends AbstractAnimal
     /**
      * Dog walk
      */
-    abstract public function walk();
+    abstract protected function walk();
 
     /**
      * Dog run
      */
-    abstract public function run();
+    abstract protected function run();
 
     /**
      * Dog want wuf
      */
-    abstract public function wuf();
+    abstract protected function wuf();
 
     /**
      * Dog byte
      */
-    abstract public function byte();
+    abstract protected function byte();
 
     /**
      * Animal behavior

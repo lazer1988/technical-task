@@ -12,14 +12,14 @@ use Zoo\UnitInterface;
 abstract class AbstractStuff implements UnitInterface
 {
     /**
-     * Worker name
+     * Name of zoo worker
      *
      * @return string
      */
-    abstract public function name(): string;
+    abstract protected function name(): string;
 
     /**
      * Worker come to work
      */
-    abstract public function comeToWork();
+    abstract protected function comeToWork();
 }

@@ -12,7 +12,7 @@ class Crow extends AbstractBird
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Crow';
     }
@@ -28,7 +28,7 @@ class Crow extends AbstractBird
     /**
      * Bird fly
      */
-    public function fly()
+    protected function fly()
     {
         echo $this->name().' is flying'.PHP_EOL;
     }

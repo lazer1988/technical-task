@@ -12,7 +12,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Bulldog';
     }
@@ -28,7 +28,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function walk()
+    protected function walk()
     {
         echo $this->name().' is walking alone'.PHP_EOL;
     }
@@ -36,7 +36,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function run()
+    protected function run()
     {
         echo $this->name().' is running alone'.PHP_EOL;
     }
@@ -44,7 +44,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function wuf()
+    protected function wuf()
     {
         echo $this->name().' is barking'.PHP_EOL;
     }
@@ -52,7 +52,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    public function byte()
+    protected function byte()
     {
         echo $this->name().' is byte'.PHP_EOL;
     }

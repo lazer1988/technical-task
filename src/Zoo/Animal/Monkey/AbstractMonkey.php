@@ -14,7 +14,7 @@ abstract class AbstractMonkey extends AbstractAnimal
     /**
      * Monkey jump
      */
-    abstract public function jump();
+    abstract protected function jump();
 
     /**
      * {@inheritdoc}

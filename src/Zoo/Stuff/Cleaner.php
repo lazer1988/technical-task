@@ -12,7 +12,7 @@ class Cleaner extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Cleaner';
     }
@@ -20,9 +20,9 @@ class Cleaner extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    public function comeToWork()
+    protected function comeToWork()
     {
-        echo $this->name().' come to work in time'.PHP_EOL;
+        echo $this->name().' came to work in time'.PHP_EOL;
     }
 
     /**

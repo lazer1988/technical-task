@@ -12,7 +12,7 @@ class Chimpanzee extends AbstractMonkey
     /**
      * {@inheritdoc}
      */
-    public function name(): string
+    protected function name(): string
     {
         return 'Chimpanzee';
     }
@@ -28,7 +28,7 @@ class Chimpanzee extends AbstractMonkey
     /**
      * {@inheritdoc}
      */
-    public function jump()
+    protected function jump()
     {
         echo $this->name().' is jumping'.PHP_EOL;
     }
