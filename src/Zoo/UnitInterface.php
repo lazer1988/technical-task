@@ -3,9 +3,9 @@
 namespace Zoo;
 
 /**
- * Class AnimalBehaviorInterface
+ * Interface UnitInterface
  *
- * @package Zoo\Animal
+ * @package Zoo
  */
 interface UnitInterface
 {

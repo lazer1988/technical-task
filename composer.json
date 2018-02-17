@@ -1,5 +1,5 @@
 {
-    "name": "lazer1988/amadeus-test",
+    "name": "lazer1988/technical-task",
     "autoload": {
         "psr-4": {
           "": "src/"
