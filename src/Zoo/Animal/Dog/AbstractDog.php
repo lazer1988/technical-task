@@ -13,33 +13,44 @@ abstract class AbstractDog extends AbstractAnimal
 {
     /**
      * Dog walk
+     *
+     * @return string
      */
-    abstract protected function walk();
+    abstract public function walk(): string;
 
     /**
      * Dog run
+     *
+     * @return string
      */
-    abstract protected function run();
+    abstract public function run(): string;
 
     /**
      * Dog want wuf
+     *
+     * @return string
      */
-    abstract protected function wuf();
+    abstract public function wuf(): string;
 
     /**
      * Dog byte
+     *
+     * @return string
      */
-    abstract protected function byte();
+    abstract public function byte(): string;
 
     /**
-     * Animal behavior
+     * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
-        $this->walk();
-        $this->run();
-        $this->wuf();
-        $this->byte();
-        $this->eat();
+        $behavior  = $this->walk();
+        $behavior .= $this->run();
+        $behavior .= $this->wuf();
+        $behavior .= $this->byte();
+        $behavior .= $this->eat();
+        $behavior .= PHP_EOL;
+
+        return $behavior;
     }
 }

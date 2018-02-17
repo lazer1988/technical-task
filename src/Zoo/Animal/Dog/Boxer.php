@@ -12,7 +12,7 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function name(): string
     {
         return 'Boxer';
     }
@@ -20,40 +20,40 @@ class Boxer extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    protected function eat()
+    public function eat(): string
     {
-        echo $this->name().' is eating meat'.PHP_EOL;
+        return $this->name().' is eating meat'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function walk()
+    public function walk(): string
     {
-        echo $this->name().' is walking with master'.PHP_EOL;
+        return $this->name().' is walking with master'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function run()
+    public function run(): string
     {
-        echo $this->name().' is running'.PHP_EOL;
+        return $this->name().' is running'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function wuf()
+    public function wuf(): string
     {
-        echo $this->name().' is barking'.PHP_EOL;
+        return $this->name().' is barking'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function byte()
+    public function byte(): string
     {
-        echo $this->name().' is byte'.PHP_EOL;
+        return $this->name().' is byte'.PHP_EOL;
     }
 }

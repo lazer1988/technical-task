@@ -13,15 +13,20 @@ abstract class AbstractBird extends AbstractAnimal
 {
     /**
      * Bird fly
+     *
+     * @return string
      */
-    abstract protected function fly();
+    abstract public function fly(): string;
 
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
-        $this->fly();
-        $this->eat();
+        $behavior  = $this->fly();
+        $behavior .= $this->eat();
+        $behavior .= PHP_EOL;
+
+        return $behavior;
     }
 }

@@ -12,24 +12,29 @@ class Cleaner extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
-        $this->comeToWork();
-        $this->clean();
+        $behavior  = $this->comeToWork();
+        $behavior .= $this->clean();
+        $behavior .= PHP_EOL;
+
+        return $behavior;
     }
 
     /**
      * Cleaning zoo
+     *
+     * @return string
      */
-    public function clean()
+    public function clean(): string
     {
-        echo $this->name().' is cleaning zoo'.PHP_EOL;
+        return $this->name().' is cleaning zoo'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function name(): string
     {
         return 'Cleaner';
     }
@@ -37,8 +42,8 @@ class Cleaner extends AbstractStuff
     /**
      * {@inheritdoc}
      */
-    protected function comeToWork()
+    public function comeToWork(): string
     {
-        echo $this->name().' came to work in time'.PHP_EOL;
+        return $this->name().' came to work in time'.PHP_EOL;
     }
 }

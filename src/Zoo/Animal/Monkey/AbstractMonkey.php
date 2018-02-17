@@ -13,15 +13,20 @@ abstract class AbstractMonkey extends AbstractAnimal
 {
     /**
      * Monkey jump
+     *
+     * @return string
      */
-    abstract protected function jump();
+    abstract public function jump(): string;
 
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
-        $this->jump();
-        $this->eat();
+        $behavior  = $this->jump();
+        $behavior .= $this->eat();
+        $behavior .= PHP_EOL;
+
+        return $behavior;
     }
 }

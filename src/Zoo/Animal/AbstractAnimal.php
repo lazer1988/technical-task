@@ -16,10 +16,12 @@ abstract class AbstractAnimal implements UnitInterface
      *
      * @return string
      */
-    abstract protected function name(): string;
+    abstract public function name(): string;
 
     /**
      * Animal eat
+     *
+     * @return string
      */
-    abstract protected function eat();
+    abstract public function eat(): string;
 }

@@ -12,7 +12,7 @@ class Pike extends AbstractFish
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function name(): string
     {
         return 'Pike';
     }
@@ -20,16 +20,16 @@ class Pike extends AbstractFish
     /**
      * {@inheritdoc}
      */
-    protected function eat()
+    public function eat(): string
     {
-        echo $this->name().' is eating'.PHP_EOL;
+        return $this->name().' is eating'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function swim()
+    public function swim(): string
     {
-        echo $this->name().' is swimming'.PHP_EOL;
+        return $this->name().' is swimming'.PHP_EOL;
     }
 }

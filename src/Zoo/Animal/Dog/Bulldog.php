@@ -12,7 +12,7 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function name(): string
     {
         return 'Bulldog';
     }
@@ -20,40 +20,40 @@ class Bulldog extends AbstractDog
     /**
      * {@inheritdoc}
      */
-    protected function eat()
+    public function eat(): string
     {
-        echo $this->name().' is eating bones'.PHP_EOL;
+        return $this->name().' is eating bones'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function walk()
+    public function walk(): string
     {
-        echo $this->name().' is walking alone'.PHP_EOL;
+        return $this->name().' is walking alone'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function run()
+    public function run(): string
     {
-        echo $this->name().' is running alone'.PHP_EOL;
+        return $this->name().' is running alone'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function wuf()
+    public function wuf(): string
     {
-        echo $this->name().' is barking'.PHP_EOL;
+        return $this->name().' is barking'.PHP_EOL;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function byte()
+    public function byte(): string
     {
-        echo $this->name().' is byte'.PHP_EOL;
+        return $this->name().' is byte'.PHP_EOL;
     }
 }

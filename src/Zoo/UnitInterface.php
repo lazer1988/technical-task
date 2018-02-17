@@ -11,6 +11,8 @@ interface UnitInterface
 {
     /**
      * Unit behavior
+     *
+     * @return string
      */
-    public function behavior();
+    public function behavior(): string;
 }

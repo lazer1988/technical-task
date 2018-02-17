@@ -17,11 +17,14 @@ class Zoo implements UnitInterface
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
+        $behavior = '';
         foreach ($this->units as $unit) {
-            $unit->behavior();
+            $behavior .= $unit->behavior();
         }
+
+        return $behavior;
     }
 
     /**
@@ -36,5 +39,13 @@ class Zoo implements UnitInterface
         }
 
         return $this;
+    }
+
+    /**
+     * @return UnitInterface[]
+     */
+    public function getUnits()
+    {
+        return $this->units;
     }
 }

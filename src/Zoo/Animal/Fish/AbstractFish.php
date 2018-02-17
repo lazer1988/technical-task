@@ -13,15 +13,20 @@ abstract class AbstractFish extends AbstractAnimal
 {
     /**
      * Fish swim
+     *
+     * @return string
      */
-    abstract protected function swim();
+    abstract public function swim(): string;
 
     /**
      * {@inheritdoc}
      */
-    public function behavior()
+    public function behavior(): string
     {
-        $this->swim();
-        $this->eat();
+        $behavior  = $this->swim();
+        $behavior .= $this->eat();
+        $behavior .= PHP_EOL;
+
+        return $behavior;
     }
 }

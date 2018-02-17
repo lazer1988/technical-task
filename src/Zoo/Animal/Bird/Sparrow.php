@@ -12,7 +12,7 @@ class Sparrow extends AbstractBird
     /**
      * {@inheritdoc}
      */
-    protected function name(): string
+    public function name(): string
     {
         return 'Sparrow';
     }
@@ -20,16 +20,16 @@ class Sparrow extends AbstractBird
     /**
      * {@inheritdoc}
      */
-    protected function eat()
+    public function eat(): string
     {
-        echo $this->name().' is eating corn'.PHP_EOL;
+        return $this->name().' is eating corn'.PHP_EOL;
     }
 
     /**
-     * Bird fly
+     * {@inheritdoc}
      */
-    protected function fly()
+    public function fly(): string
     {
-        echo $this->name().' is flying on the street'.PHP_EOL;
+        return $this->name().' is flying on the street'.PHP_EOL;
     }
 }

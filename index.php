@@ -29,10 +29,21 @@ $animals
 ;
 
 // add stuff to zoo
+$manager = new Manager();
+$manager
+    ->addAnimal(new Crow())
+    ->addAnimal(new Boxer())
+;
+
+$worker = new Worker();
+$worker
+    ->addAnimal(new Gorilla())
+;
+
 $stuff = new Zoo();
 $stuff
-    ->addUnit(new Manager())
-    ->addUnit(new Worker())
+    ->addUnit($manager)
+    ->addUnit($worker)
     ->addUnit(new Cleaner())
 ;
 
@@ -43,4 +54,4 @@ $zoo
     ->addUnit($animals)
 ;
 
-$zoo->behavior();
+echo $zoo->behavior();
